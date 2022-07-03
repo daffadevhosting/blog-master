@@ -1,0 +1,96 @@
+
+name: UnanG
+title: DaffaDev
+description: Blog from Nowhere
+
+avatar: /assets/logo/gif.webp
+author: /assets/logo/ava.png
+
+footer-links:
+  dribbble:
+  email:
+  facebook:
+  flickr:
+  github: 
+  instagram:
+  linkedin:
+  pinterest:
+  rss: 
+  twitter: 
+  stackoverflow: 
+  youtube: 
+  googleplus: 
+
+disqus:
+
+google_analytics:
+
+url: 
+
+baseurl: ""
+
+permalink: /:title/
+
+version: v4.2.2
+
+markdown: kramdown
+kramdown:
+  input: GFM
+
+sass:
+  sass_dir: /assets/_sass
+  style: compressed
+
+plugins:
+  - jekyll-feed
+  - jekyll-paginate
+  - jekyll-seo-tag
+  - jekyll-timeago
+
+collections:
+  products:
+    output: true
+
+paginate: 6
+paginate_path: /page:num/
+
+autopages:
+  enabled: true
+  categories:
+    layouts:
+      - "category.html"
+    title: ":cat"
+    permalink: "/category/:cat"
+  collections:
+    layouts:
+      - "category.html"
+    title: " :coll" # :coll is replaced by the collection name
+    permalink: "/:coll/"
+
+  tags:
+    layouts:
+      - "tag.html"
+    title: ":tag" # :tag is replaced by the tag name
+    permalink: "/tag/:tag"
+
+tag_page_layout: category
+tag_page_dir: tag
+tag_permalink_style: pretty
+
+    
+collections:
+  authors:
+    output: true
+    permalink: /author/:path/
+
+feed:
+  collections:
+    posts:
+      path: "/index.xml"
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - LICENSE
+  - README.md
+  - CNAME

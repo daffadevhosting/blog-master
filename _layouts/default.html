@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: "en-US" }}">
+  <head>
+    {% include top_head.html %}
+  </head>
+
+  <body>
+    {% include btn_up.html %}
+    <div class="preloader">
+        <div class="lds-roller"><img src="/assets/logo/loading.webp" alt="loding" width="40"/></div>
+    </div>
+    {% include header.html %}
+
+    <div id="main" role="main" class="container">
+      {{ content }}
+          {% include pagination.html %}
+            {% include modal_search.html %}
+    </div>
+
+          {% include footer_section.html %}
+            {% include analytics.html %}
+    <script src="{{'/assets/js/build.min.js' | relative_url}}"></script>
+  </body>
+</html>

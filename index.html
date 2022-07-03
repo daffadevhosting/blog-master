@@ -1,0 +1,44 @@
+---
+layout: default
+pagination: 
+  enabled: true
+---
+
+
+<div class="posts row infinite-scroll-2">
+    {% for post in paginator.posts %}
+<div class="col-md-6 col-lg-6 post-item">
+    {% assign author = site.authors | where: 'author_id', post.author_id | first %}
+<article class="blog-style {% if page.url == '/' %}firstpage{% endif %} border-0 card mb-4 position-relative">
+    <div class="feature-image">
+        <div class="image-frame image-hover-style-1">
+            <a href="{{post.url | relative_url}}"> <img class="lazyload" src="{{post.post_image}}" alt="{{post.title}}"
+                    class="w-100"></a>
+        </div>
+    </div>
+    <div class="card-body">
+        {% for category in post.categories %}
+            <a href="{{'/category/' | relative_url}}{{ category | slugify }}" class="badge bg-primary">{{category}}</a>
+        {% endfor %}
+
+        <h3><a href="{{post.url | relative_url}}">{{post.title}}</a> </h3>
+
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="author-block">
+                    <ul class="avatar list-inline mb-0">
+                        <li class="list-inline-item"><a class="small" href="{{author.url}}">
+<img src="{{site.author | relative_url}}" alt="{{author.name}}" data-bs-toggle="tooltip" data-bs-placement="top" title="{{site.name}}">{{site.name}}</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-6"> <span class="date-info small  float-lg-end">
+                <span>{{post.date | date: '%d %B'}}</span>
+                </span>
+            </div>
+        </div>
+    </div>
+</article>
+</div>
+  {% endfor %}
+</div>
