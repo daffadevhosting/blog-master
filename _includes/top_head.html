@@ -1,0 +1,17 @@
+
+    <title>{% if page.title %}{{ page.title }} – {% endif %}{{ site.title }} – {{ site.description }}</title>
+
+    {% include meta.html %}
+<link rel="icon" href="{{'/assets/favicon/favicon.ico' | relative_url}}" type="image/x-icon" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@700&family=Open+Sans&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" id="fontawesome-css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.0/css/all.css" type="text/css" media="all">
+    <!--[if lt IE 9]>
+      <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+    <link rel="alternate" type="application/rss+xml" title="{{ site.title }} - {{ site.description }}" href="{{ site.baseurl }}/feed.xml" />
+    {% feed_meta %}
+    <!-- Created with Jekyll  -->

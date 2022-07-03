@@ -1,0 +1,31 @@
+<div class="sidebar-widget mb-3 border border-light rounded">
+    <div class="wrapper">
+    {% include adsense.html %}
+    </div>
+ </div>
+
+ <div class="sidebar-widget mb-3 border border-light rounded">
+    <div class="wrapper">
+       <ul class="nav nav-tabs" id="tab-menu">
+          <li class="nav-item">
+             <span class="#tab2" data-bs-toggle="tab"><h5>Recent Post</h5></span>
+          </li>
+       </ul>
+       <div class="tab-content" id="tab-content">
+          <div class="tab-pane fade show active" id="tab2">
+             <ul class="counter-post list-inline">
+                {% for post in site.posts limit:5 %}
+                   <li class="counter-post-item">
+                      <a href="{{post.url | relative_url}}">{{post.title}}</a>
+                   </li>
+                {% endfor %}
+             </ul>
+          </div>
+       </div>
+    </div>
+ </div>
+<div class="sidebar-widget mb-3 border border-light rounded">
+    <div class="wrapper">
+    {% include adsense.html %}
+    </div>
+ </div>

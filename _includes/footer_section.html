@@ -1,0 +1,25 @@
+<section class="cta-area py-5 bg-overlay">
+    <ul class="circles">
+        <li><i class="fab fa-android fa-5x"></i></li>
+        <li><i class="fas fa-github fa-3x"></i></li>
+        <li><i class="fab fa-android fa-1x"></i></li>
+        <li><i class="fab fa-bitcoin fa-5x"></i></li>
+        <li><i class="fas fa-github fa-4x"></i></li>
+        <li><i class="fab fa-bitcoin fa-2x"></i></li>
+        <li><i class="fas fa-github fa-1x"></i></li>
+        <li><i class="fas fa-github fa-3x"></i></li>
+    </ul>
+    <div class="container-fluid text-center z-index-10 position-relative  ">
+        <div class="row">
+            <div class="col-md-8 m-auto">
+<span style="color:whitesmoke;" id="WelcomeMessage"></span>
+                <p style="color:whitesmoke;">{{site.title}} - &copy; Copyright {{ site.time | date: '%Y' }}</p>
+            </div>
+        </div>
+    </div>
+</section>
+<script type="text/javascript">
+var Messages=new Date,Jams=Messages.getHours();document.getElementById("WelcomeMessage").innerHTML=5<=Jams&&Jams<=11?"Selamat Pagi":12<=Jams&&Jams<=15?"Selamat Siang":15<=Jams&&Jams<=17?"Selamat Sore":18<=Jams&&Jams<=23?"Selamat malam":"Selamat malam menjelang pagi"
+var mybutton=document.getElementById("toTop");window.onscroll=function(){scrollFunction()};function scrollFunction(){if(document.body.scrollTop>20||document.documentElement.scrollTop>20){mybutton.style.display="block"}else{mybutton.style.display="none"}}
+function topFunction(){document.body.scrollTop=0;document.documentElement.scrollTop=0}
+</script>

@@ -1,0 +1,26 @@
+<div class="header">
+<div class="text-header">
+<a class="avatar" href="{{site.baseurl}}/">
+<img src="{{site.avatar}}" alt="avatar" width="40" height="40" style="border-radius:15%;"/>
+</a>
+                    <div class="search-modal" data-bs-toggle="modal" data-bs-target="#search-modal"><a class="nav-link" href="javascript:;"> <i class="fas fa-search"></i> </a>
+                </div>
+</div>
+</div>
+  <input type="checkbox" class="openSidebarMenu" id="openSidebarMenu">
+  <label for="openSidebarMenu" class="sidebarIconToggle">
+    <div class="spinner diagonal part-1"></div>
+    <div class="spinner horizontal"></div>
+    <div class="spinner diagonal part-2"></div>
+  </label>
+  <div id="sidebarMenu">
+    <ul class="sidebarMenuInner">
+      <li>{{ site.title }} <span>{{ site.description }}</span> </li>
+                {% for post in site.posts limit:5 %}
+                   <li class="nav-item">
+                      <a class="nav-link" href="{{post.url | relative_url}}">{{post.title}}</a>
+                   </li>
+                {% endfor %}
+    </ul>
+  </div>
+
